@@ -1,15 +1,28 @@
 addButton = document.getElementById('addButton');
-addForm = document.getElementById('add-book-form');
+overlay = document.getElementById('overlay');
 
 form = document.getElementById('form');
 cancelButton = document.getElementById('cancelButton');
 confirmButton = document.getElementById('confirmButton');
 
 addButton.addEventListener('click', () => {
-  addForm.classList.remove('hidden');
+  overlay.classList.remove('hidden');
   form.reset();
 })
 
 cancelButton.addEventListener('click', () => {
-  addForm.classList.add('hidden');
+  overlay.classList.add('hidden');
+})
+
+togglerValue = document.getElementById('book-is-read');
+togglerText = document.getElementById('book-is-read-text');
+
+togglerValue.addEventListener('change', () => {
+  if(togglerValue.checked === true){
+    togglerText.textContent = "Read ✓"
+  }
+  else {
+    togglerText.textContent = "Unread ✗"
+  }
+  console.log(togglerValue.checked);
 })

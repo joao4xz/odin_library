@@ -20,20 +20,20 @@
         Add book
       </button>
     </div>
-    <div id="add-book-form" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50">
+    <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10">
       <form action="" id="form" class="flex flex-col items-center bg-gray-200 p-5 gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author">
-        <label for="pages-number">Number of Pages:</label>
-        <input type="number" id="pages-number" name="pages-number">
-        <label for="toogleA" class="flex items-center cursor-pointer">
+        <label for="form-title">Title:</label>
+        <input type="text" id="form-title" name="title">
+        <label for="form-author">Author:</label>
+        <input type="text" id="form-author" name="author">
+        <label for="form-pages-number">Number of Pages:</label>
+        <input type="number" id="form-pages-number" name="pages-number">
+        <label for="form-is-read" class="flex items-center cursor-pointer">
           <div class="mr-3 text-gray-700 font-medium">
             Is read?
           </div>
           <div class="relative">
-            <input id="toogleA" type="checkbox" class="sr-only" />
+            <input id="form-is-read" name="is-read" type="checkbox" class="sr-only" />
             <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
             <div class="dot absolute w-6 h-6 bg-red-600 rounded-full shadow -left-1 -top-1 transition"></div>
           </div>
@@ -44,8 +44,22 @@
         </div>
       </form>
     </div>
-    <div class="book-container">
-
+    <div class="book-container max-w-5xl mx-auto my-0">
+      <div class="book w-80 p-4 gap-2 bg-gray-200 flex flex-col items-center">
+        <div class="title text-lg font-bold">Atomic Habits</div>
+        <div class="author">James Clear</div>
+        <div class="pages-number">320 pages</div>
+        <label for="book-is-read" class="flex items-center cursor-pointer">
+          <div id="book-is-read-text" class="mr-3 text-gray-700 font-medium">
+            Unread ✗
+          </div>
+          <div class="relative">
+            <input id="book-is-read" type="checkbox" class="sr-only"/>
+            <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+            <div class="dot absolute w-6 h-6 bg-red-600 rounded-full shadow -left-1 -top-1 transition"></div>
+          </div>
+        </label>
+      </div>
     </div>
   </main>
   <footer>
