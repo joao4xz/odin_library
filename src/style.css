@@ -16,3 +16,9 @@ input:checked ~ .dot {
     @apply border-2 px-3 py-1 mx-3 mt-2 hover:text-white;
   }
 }
+
+@layer utilities {
+  .grid-cols-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
