@@ -15,13 +15,13 @@
   </header>
   <main>
     <div class="button-container flex justify-center">
-      <button type="button" class="bg-gray-200 border-2 border-neutral-500 border-solid rounded-md p-1.5 m-8 flex items-center hover:text-white hover:fill-white hover:bg-green-400 hover:border-green-500">
+      <button type="button" id="addButton" class="bg-gray-200 border-2 border-neutral-500 border-solid rounded-md p-1.5 m-8 flex items-center hover:text-white hover:fill-white hover:bg-green-400 hover:border-green-500">
         <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
         Add book
       </button>
     </div>
-    <div class="add-book-form inline-block">
-      <form action="" class="flex flex-col items-center bg-gray-200 p-5 gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div id="add-book-form" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50">
+      <form action="" id="form" class="flex flex-col items-center bg-gray-200 p-5 gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title">
         <label for="author">Author:</label>
@@ -39,8 +39,8 @@
           </div>
         </label>
         <div class="buttons">
-          <button type="button" class="formButton border-red-900 hover:bg-red-500">Cancel</button>
-          <button type="submit" class="formButton border-green-900 hover:bg-green-400">Confirm</button>
+          <button type="button" id="cancelButton" class="formButton border-red-900 hover:bg-red-500">Cancel</button>
+          <button type="submit" id="confirmButton" class="formButton border-green-900 hover:bg-green-400">Confirm</button>
         </div>
       </form>
     </div>
