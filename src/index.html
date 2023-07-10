@@ -14,11 +14,35 @@
     </a>
   </header>
   <main>
-    <div class="button-container flex justify-center p-10">
-      <button type="button" class="bg-gray-200 border-2 border-neutral-500 border-solid rounded-md p-1.5 flex items-center hover:text-white hover:fill-white hover:bg-green-400 hover:border-green-500">
+    <div class="button-container flex justify-center">
+      <button type="button" class="bg-gray-200 border-2 border-neutral-500 border-solid rounded-md p-1.5 m-8 flex items-center hover:text-white hover:fill-white hover:bg-green-400 hover:border-green-500">
         <svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
         Add book
       </button>
+    </div>
+    <div class="add-book-form inline-block">
+      <form action="" class="flex flex-col items-center bg-gray-200 p-5 gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author">
+        <label for="pages-number">Number of Pages:</label>
+        <input type="number" id="pages-number" name="pages-number">
+        <label for="toogleA" class="flex items-center cursor-pointer">
+          <div class="mr-3 text-gray-700 font-medium">
+            Is read?
+          </div>
+          <div class="relative">
+            <input id="toogleA" type="checkbox" class="sr-only" />
+            <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+            <div class="dot absolute w-6 h-6 bg-red-600 rounded-full shadow -left-1 -top-1 transition"></div>
+          </div>
+        </label>
+        <div class="buttons">
+          <button type="button" class="formButton border-red-900 hover:bg-red-500">Cancel</button>
+          <button type="submit" class="formButton border-green-900 hover:bg-green-400">Confirm</button>
+        </div>
+      </form>
     </div>
     <div class="book-container">
 
@@ -27,5 +51,6 @@
   <footer>
 
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
