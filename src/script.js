@@ -203,7 +203,9 @@ confirmButton.addEventListener('click', () => {
   event.preventDefault();
 })
 
-addBookToLibrary('Atomic Habits', 'Author', 211, true);
-addBookToLibrary('The bible', 'Author', 232, false);
-addBookToLibrary('How to make friend and influence people', 'Author', 223, true);
-addBookToLibrary('Linux Book', 'Author', 225, false);
+addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 336, true);
+addBookToLibrary('1984', 'George Orwell', 328, false);
+addBookToLibrary('The Great Gatsby', 'F.Scott Fitzgerald', 180, true);
+addBookToLibrary('Pride and Prejudice', 'Jane Austen', 432, false);
+addBookToLibrary('The catcher in the Rye', 'J.D.Salinger', 224, true);
+addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 310, true);
