@@ -46,8 +46,8 @@
     </div>
     <div id="book-container" class="book-container max-w-5xl mx-auto my-0 grid grid-cols-responsive justify-items-center gap-y-4">
       <!--  -->
-      <div class="book w-80 p-4 gap-2 bg-gray-200 flex flex-col items-center shadow-md border rounded-lg">
-        <div class="title text-lg font-bold">Atomic Habits</div>
+      <div class="book w-80 p-4 gap-2 bg-gray-200 flex flex-col items-center justify-center shadow-md border rounded-lg relative">
+        <div class="title text-lg font-bold">Como fazer amigos e influenciar pessoas</div>
         <div class="author">James Clear</div>
         <div class="pages-number">320 pages</div>
         <label for="book-is-read" class="flex items-center cursor-pointer">
@@ -60,6 +60,9 @@
             <div class="dot absolute w-6 h-6 bg-red-600 rounded-full shadow -left-1 -top-1 transition"></div>
           </div>
         </label>
+        <button id="deleteBook">
+          <svg class="w-5 absolute top-1 right-1 hover:fill-red-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-book</title><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+        </button>
       </div>
       <!--  -->
     </div>
