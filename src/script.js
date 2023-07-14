@@ -1,45 +1,43 @@
 // Library Array
 const myLibrary = [];
 
-// Constructor
-function Book(title, author, numPages, isRead, index) {
-  this.title = title;
-  this.author = author;
-  this.numPages = numPages;
-  this.isRead = isRead;
-  this.index = index
-}
+class Book {
+  constructor(title, author, numPages, isRead, index) {
+    this.title = title;
+    this.author = author;
+    this.numPages = numPages;
+    this.isRead = isRead;
+    this.index = index
+  }
 
-// Prototype
-Book.prototype.setReadStatus = function(isRead){
-  this.isRead = isRead;
-}
+  setReadStatus(isRead) {
+    this.isRead = isRead;
+  }
 
-// Function to handle the toggle of each book
-Book.prototype.handleToggleChange = function(toggleInput, readText) {
-  toggleInput.addEventListener('change', () => {
-    if(toggleInput.checked === true){
-      readText.textContent = "Read ✓"
-      const isRead = toggleInput.checked;
-      myLibrary[this.index].setReadStatus(isRead);
-    }
-    else {
-      readText.textContent = "Unread ✗"
-      const isRead = toggleInput.checked;
-      myLibrary[this.index].setReadStatus(isRead);
-    }
-    console.log(myLibrary);
-  });
-}
+  handleToggleChange(toggleInput, readText) {
+    toggleInput.addEventListener('change', () => {
+      if(toggleInput.checked === true){
+        readText.textContent = "Read ✓"
+        const isRead = toggleInput.checked;
+        myLibrary[this.index].setReadStatus(isRead);
+      }
+      else {
+        readText.textContent = "Unread ✗"
+        const isRead = toggleInput.checked;
+        myLibrary[this.index].setReadStatus(isRead);
+      }
+      console.log(myLibrary);
+    });
+  }
 
-// Function to handle the delete button of each book
-Book.prototype.deleteBook = function(deleteButton, index) {
-  deleteButton.addEventListener('click', () => {
-    const book = document.getElementById(`book-${index+1}`);
-    book.remove();
-    myLibrary.splice(this.index, 1);
-    updateIndex(index);
-  });
+  deleteBook(deleteButton, index) {
+    deleteButton.addEventListener('click', () => {
+      const book = document.getElementById(`book-${index+1}`);
+      book.remove();
+      myLibrary.splice(this.index, 1);
+      updateIndex(index);
+    });
+  }
 }
 
 // Function to add a book to the library
